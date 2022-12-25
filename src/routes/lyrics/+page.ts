@@ -1,10 +1,14 @@
 import type { PageLoad } from './$types';
 
 export const load = (() => {
-  const oCeVeste = {
+  type Song = {
+    title: string;
+    searchLyrics: string;
+    displayLyrics: string[][];
+  };
+
+  const oCeVeste: Song = {
     title: 'O ce veste',
-    searchLyrics:
-      'O, ce veste minunata In Vitleem ni s-arata Astazi s-a nascut Cel far-de-nceput Cum au spus prorocii Ca la Vitleem Maria Savarsind calatoria Intr-un mic salas Langa-acel oras A nascut pe Mesia Pe Fiul in al Sau nume Tatal L-a trimis in lume Sa se nasca Si sa creasca Sa ne mantuiasca',
     displayLyrics: [
       [
         'O, ce veste minunată!',
@@ -28,11 +32,11 @@ export const load = (() => {
         'Să ne mântuiască.',
       ],
     ],
+    searchLyrics: '',
   };
 
-  const laVitleem = {
+  const laVitleem: Song = {
     title: 'La Vitleem colo-n jos',
-    searchLyrics: 'La Vitleem colo-n jos',
     displayLyrics: [
       ['La Vitleem colo-n jos', 'Cerul arde luminos', 'Preacurata', 'Naște astăzi pe Hristos.'],
       ['Naște-n ieslea boilor', 'Pe-mpăratul tuturor', 'Preacurata', 'Stă și plânge-ncetișor.'],
@@ -49,9 +53,61 @@ export const load = (() => {
         'Pruncul sfânt de-i înfășa.',
       ],
     ],
+    searchLyrics: '',
   };
 
+  const songs: Song[] = [laVitleem, oCeVeste];
+
+  songs.forEach((song) => {
+    song.searchLyrics = convertDisplayToSearchLyrics(song.displayLyrics);
+    console.log(song.searchLyrics);
+  });
+
+  laVitleem.displayLyrics[0].reduce((total, current) => `${total} ${current}`, '');
+
   return {
-    songs: [oCeVeste, laVitleem],
+    songs: songs,
   };
 }) satisfies PageLoad;
+
+function convertDisplayToSearchLyrics(displayLyrics: string[][]) {
+  return convertRomanianSymbols(removePunctuation(toSingleString(displayLyrics)));
+}
+
+function toSingleString(lyrics: string[][]) {
+  return lyrics.reduce((songStr, verse) => `${songStr}${verseReduce(verse)}`, '');
+}
+
+function verseReduce(verse: string[]) {
+  return verse.reduce((result, line) => `${result}${line} `, '');
+}
+
+function removePunctuation(s: string) {
+  // eslint-disable-next-line no-useless-escape
+  return s.replace(/[.,\/#!$%\^&\*;:{}=\_`~()]/g, '').replace(/\s{2,}/g, ' ');
+}
+
+function convertRomanianSymbols(s: string) {
+  const charTranslatation: { [key: string]: string } = {
+    ă: 'a',
+    â: 'a',
+    î: 'i',
+    ș: 's',
+    ş: 's',
+    ț: 't',
+    Ă: 'A',
+    Â: 'A',
+    Î: 'I',
+    Ș: 'S',
+    Ş: 'S',
+    Ț: 'T',
+  };
+
+  let result = s;
+
+  for (const romanianChar in charTranslatation) {
+    result = result.replace(new RegExp(`${romanianChar}`, 'g'), charTranslatation[romanianChar]);
+  }
+
+  return result;
+}
