@@ -13,12 +13,12 @@
 <h2 class="text-center">Versuri</h2>
 <input
   type="text"
-  placeholder="Filtering by song title ... "
+  placeholder="Filtering by song lyrics ... "
   class="input input-bordered input-primary w-full"
   bind:value={search}
   on:input={filterByVerse}
 />
-{#each songs as { title, displayLyrics }}
+{#each songs as { title, displayLyrics, searchLyrics }}
   <h3>{title}</h3>
   {#each displayLyrics as verse}
     <p>
@@ -27,4 +27,5 @@
       {/each}
     </p>
   {/each}
+  <p class="text-neutral-focus">{searchLyrics}</p>
 {/each}
