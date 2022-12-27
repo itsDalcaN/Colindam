@@ -7,6 +7,8 @@
 <header>
   <Header />
 </header>
-<article class="w-4/5 my-10 m-auto prose prose-base sm:prose-xs md:prose-lg lg:prose-xl">
+<article
+  class="w-11/12 my-10 m-auto prose prose-base sm:prose-xs md:prose-lg lg:prose-xl max-w-none"
+>
   <slot />
 </article>
