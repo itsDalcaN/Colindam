@@ -34,49 +34,51 @@
 </script>
 
 <h2 class="text-center">Lyrics</h2>
-<div class="mb-10">
-  <div class="search-field">
-    <div class="material-symbols-outlined">search</div>
-    <input
-      type="text"
-      placeholder="Search lyrics ... "
-      class="input input-ghost w-full text-left mx-2"
-      bind:value={search}
-    />
-    <button on:click={() => (search = '')}>
-      <span class="material-symbols-outlined">backspace</span>
-    </button>
-    <label class="swap">
-      <!-- this hidden checkbox controls the state -->
-      <input type="checkbox" bind:checked={shouldExpandAll} />
-      <!-- Collapse icon -->
-      <div class="swap-on">
-        <span class="material-symbols-outlined">expand_less</span>
-      </div>
-      <!-- Expand icon -->
-      <div class="swap-off">
-        <span class="material-symbols-outlined">expand_more</span>
-      </div>
-    </label>
+<div class="m-auto sm:w-5/6 md:w-3/5 lg:w-1/2 xl:w-5/12 ">
+  <div class="mb-10">
+    <div class="search-field">
+      <div class="material-symbols-outlined">search</div>
+      <input
+        type="text"
+        placeholder="Search lyrics ... "
+        class="input input-ghost w-full text-left mx-2"
+        bind:value={search}
+      />
+      <button on:click={() => (search = '')}>
+        <span class="material-symbols-outlined">backspace</span>
+      </button>
+      <label class="swap">
+        <!-- this hidden checkbox controls the state -->
+        <input type="checkbox" bind:checked={shouldExpandAll} />
+        <!-- Collapse icon -->
+        <div class="swap-on">
+          <span class="material-symbols-outlined">expand_less</span>
+        </div>
+        <!-- Expand icon -->
+        <div class="swap-off">
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+      </label>
+    </div>
   </div>
-</div>
-<div>
-  {#each songs as { title, displayLyrics }}
-    <CollapsibleSection {title} expanded={shouldExpandAll || activateAutoExpand}>
-      {#each displayLyrics as verse}
-        <p>
-          {#each verse as line}
-            {#if search !== '' && stringIncludesValue(line, search)}
-              <span><mark class="text-accent bg-transparent">{line}</mark></span>
-              <br />
-            {:else}
-              <span>{line}</span> <br />
-            {/if}
-          {/each}
-        </p>
-      {/each}
-    </CollapsibleSection>
-  {/each}
+  <div>
+    {#each songs as { title, displayLyrics }}
+      <CollapsibleSection {title} expanded={shouldExpandAll || activateAutoExpand}>
+        {#each displayLyrics as verse}
+          <p>
+            {#each verse as line}
+              {#if search !== '' && stringIncludesValue(line, search)}
+                <span><mark class="text-accent bg-transparent">{line}</mark></span>
+                <br />
+              {:else}
+                <span>{line}</span> <br />
+              {/if}
+            {/each}
+          </p>
+        {/each}
+      </CollapsibleSection>
+    {/each}
+  </div>
 </div>
 
 <style lang="scss">
