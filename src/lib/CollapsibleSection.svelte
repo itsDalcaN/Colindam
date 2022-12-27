@@ -1,6 +1,4 @@
 <script lang="ts">
-  // based on suggestions from:
-  // Inclusive Components by Heydon Pickering https://inclusive-components.design/collapsible-sections/
   export let title: string;
   export let expanded = false;
 
@@ -11,8 +9,12 @@
 
 <div class="collapsible">
   <h3>
-    <button aria-expanded={expanded} on:click={toggleExpanded} class="btn btn-outline btn-secondary"
-      >{title}
+    <button
+      aria-expanded={expanded}
+      on:click={toggleExpanded}
+      class="btn btn-outline btn-secondary"
+    >
+      {title}
       <svg viewBox="0 0 20 20" fill="none" class="stroke-2 stroke-secondary">
         <path class="vert" d="M10 1V19" />
         <path d="M1 10L19 10" />
@@ -30,6 +32,15 @@
 <style lang="scss">
   .collapsible {
     margin: 1rem 0rem;
+  }
+
+  .contents {
+    display: flow-root;
+    margin: 0px 0.125rem;
+    padding: 0px 2rem;
+    border-bottom: 2px hsl(var(--b3)) solid;
+    border-radius: 0.5rem;
+    background-color: hsl(var(--b2));
   }
 
   h3 {

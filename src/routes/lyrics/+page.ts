@@ -1,9 +1,9 @@
-import { laVitleem, oCeVeste, oMinune, type Song } from '$lib/songs';
+import { iosif, laVitleem, mareMinune, oCeVeste, oMinune, slobozaNe, type Song } from '$lib/songs';
 import { convertRomanianSymbols, removePunctuation } from '$lib/util';
 import type { PageLoad } from './$types';
 
 export const load = (() => {
-  const songs: Song[] = [oCeVeste, laVitleem, oMinune];
+  const songs: Song[] = [oCeVeste, laVitleem, oMinune, mareMinune, iosif, slobozaNe];
 
   songs.forEach((song) => {
     song.searchLyrics = convertDisplayToSearchLyrics(song.displayLyrics);

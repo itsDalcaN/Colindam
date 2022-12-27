@@ -1,5 +1,6 @@
 <script lang="ts">
   import CollapsibleSection from '$lib/CollapsibleSection.svelte';
+  import { autoExpandOnSearchSetting } from '$lib/stores';
   import { convertRomanianSymbols, removePunctuation } from '$lib/util';
   import type { PageData } from './$types';
   export let data: PageData;
@@ -7,13 +8,28 @@
   let songs = initSongs;
   let search = '';
 
-  function filterByVerse() {
-    songs = initSongs.filter((s) => stringIncludesSearch(s.searchLyrics));
+  let shouldExpandAll = false; // Expand all songs toggle state
+  let activateAutoExpand = false; // Conditionally expand based on search
+  let shouldAutoExpandOnSearch = false; // Local setting from the store
+
+  autoExpandOnSearchSetting.subscribe((value) => {
+    shouldAutoExpandOnSearch = value;
+  });
+
+  $: {
+    updateSongs(search);
+    if (shouldAutoExpandOnSearch) {
+      activateAutoExpand = search !== '';
+    }
   }
 
-  function stringIncludesSearch(line: string) {
+  function updateSongs(value: string) {
+    songs = initSongs.filter((s) => stringIncludesValue(s.searchLyrics, value));
+  }
+
+  function stringIncludesValue(line: string, value: string) {
     const formattedString = convertRomanianSymbols(removePunctuation(line));
-    return formattedString.toLowerCase().includes(search.toLowerCase());
+    return formattedString.toLowerCase().includes(value.toLowerCase());
   }
 </script>
 
@@ -26,18 +42,37 @@
       placeholder="Filtering by song lyrics ... "
       class="input input-ghost w-full text-left mx-4"
       bind:value={search}
-      on:input={filterByVerse}
     />
+    <button class="tooltip" data-tip="Clear" on:click={() => (search = '')}>
+      <span class="material-symbols-outlined">backspace</span>
+    </button>
+    <label class="swap">
+      <!-- this hidden checkbox controls the state -->
+      <input
+        type="checkbox"
+        bind:checked={shouldExpandAll}
+        class="tooltip"
+        data-tip={shouldExpandAll ? 'Collapse all' : 'Expand all'}
+      />
+      <!-- Collapse icon -->
+      <div class="swap-on">
+        <span class="material-symbols-outlined">expand_less</span>
+      </div>
+      <!-- Expand icon -->
+      <div class="swap-off">
+        <span class="material-symbols-outlined">expand_more</span>
+      </div>
+    </label>
   </div>
 </div>
 <div>
   {#each songs as { title, displayLyrics }}
-    <CollapsibleSection {title} expanded={search !== ''}>
+    <CollapsibleSection {title} expanded={shouldExpandAll || activateAutoExpand}>
       {#each displayLyrics as verse}
         <p>
           {#each verse as line}
-            {#if search !== '' && stringIncludesSearch(line)}
-              <span><mark class="text-success bg-transparent">{line}</mark></span>
+            {#if search !== '' && stringIncludesValue(line, search)}
+              <span><mark class="text-accent bg-transparent">{line}</mark></span>
               <br />
             {:else}
               <span>{line}</span> <br />
@@ -53,8 +88,12 @@
   .search-field {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
     width: 100%;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;
+    padding: 5px;
   }
 </style>
