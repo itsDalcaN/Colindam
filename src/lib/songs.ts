@@ -132,8 +132,96 @@ export const slobozaNe: Song = {
     ['C-afară plouă de varsă', 'Bună sara lui Crăciun!'],
     ['Și ne ninje de ne frije', 'Bună sara lui Crăciun!'],
     ['V-aducem vestea cea mare', 'Că e zi de sărbătoare', 'Bună sara lui Crăciun!'],
-    ['Că azi s-a nascut Hristos', 'Tuturora spre folos', 'Bună sara lui Crăciun!'],
+    ['Că azi s-a născut Hristos', 'Tuturora spre folos', 'Bună sara lui Crăciun!'],
     ['Să fii gazdă sănătoasă', 'Să plătești corinda nostră', 'Bună sara lui Crăciun!'],
   ],
+  searchLyrics: '',
+};
+
+export const laNunta: Song = {
+  title: 'La nunta ce s-a-ntâmplat',
+  displayLyrics: [
+    ['La nunta ce s-a-ntâmplat', 'În Cana Galileii', 'Fost-a și Iisus chemat', 'În Cana Galileii.'],
+    [
+      'Iară mama lui Iisus',
+      'Văzând că nu-i vin de-ajuns',
+      'Zise: Fiul meu iubit',
+      'Vinul li s-a isprăvit.',
+    ],
+    [
+      'Iară Iisus s-a sculat',
+      'Și slugile le-a chemat',
+      'Apă-n șase vase-au pus',
+      'Și le-au umplut până sus.',
+    ],
+    ['Hristos le-a blagoslovit', 'În Cana Galileii', 'Apă-n vin s-a prefăcut', 'În Cana Galileii.'],
+    [
+      'Atunci toți s-au cunoscut',
+      'În Cana Galileii',
+      'Cum că Hristos s-a născut',
+      'În Cana Galileii.',
+    ],
+  ],
+  searchLyrics: '',
+};
+
+export const domnulet: Song = {
+  title: 'Domnuleț și Domn din cer',
+  displayLyrics: [
+    [
+      'Mare-i seara de-astă seară',
+      'Domnuleț și Domn din cer',
+      'Și nu-i seară de-astă seară',
+      'Domnuleț și Domn din cer.',
+    ],
+    [
+      'Ci e seara lui Crăciun',
+      'Lui Crăciun celui bătrân',
+      'Când s-a născut Fiul sfânt',
+      'Fiul sfânt pe-acest pământ.',
+    ],
+    [
+      'Fiul plânge, stare n-are',
+      'Domnuleț și Domn din cer',
+      'Pe bratele maicii sale',
+      'Domnuleț și Domn din cer.',
+    ],
+    [
+      'Ne-nchinăm cu sănătate',
+      'Tot de bine s-aveți parte',
+      'Hristos să vă dea de toate',
+      'Viață lungă, sănătate!',
+    ],
+    [
+      'Noi umblăm și colindăm',
+      'Domnuleț și Domn din cer',
+      'Cestor fețe ne-nchinăm',
+      'Domnuleț și Domn din cer',
+    ],
+  ],
+  searchLyrics: '',
+};
+
+export const praznic: Song = {
+  title: 'Praznic luminos',
+  displayLyrics: [['in progress']],
+  searchLyrics: '',
+};
+
+export const bingBang: Song = {
+  title: "(Bing! Bang!) Mărire-ntru cele 'nalte",
+  displayLyrics: [['in progress']],
+  searchLyrics: '',
+};
+
+export const iataVinColindatori: Song = {
+  title: 'Iată, vin colindători',
+  displayLyrics: [['in progress']],
+  searchLyrics: '',
+};
+
+export const colindita: Song = {
+  title: 'Colindița',
+  displayLyrics: [['in progress']],
   searchLyrics: '',
 };

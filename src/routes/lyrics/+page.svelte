@@ -39,21 +39,16 @@
     <div class="material-symbols-outlined">search</div>
     <input
       type="text"
-      placeholder="Filtering by song lyrics ... "
-      class="input input-ghost w-full text-left mx-4"
+      placeholder="Search lyrics ... "
+      class="input input-ghost w-full text-left mx-2"
       bind:value={search}
     />
-    <button class="tooltip" data-tip="Clear" on:click={() => (search = '')}>
+    <button on:click={() => (search = '')}>
       <span class="material-symbols-outlined">backspace</span>
     </button>
     <label class="swap">
       <!-- this hidden checkbox controls the state -->
-      <input
-        type="checkbox"
-        bind:checked={shouldExpandAll}
-        class="tooltip"
-        data-tip={shouldExpandAll ? 'Collapse all' : 'Expand all'}
-      />
+      <input type="checkbox" bind:checked={shouldExpandAll} />
       <!-- Collapse icon -->
       <div class="swap-on">
         <span class="material-symbols-outlined">expand_less</span>

@@ -12,7 +12,7 @@
     <button
       aria-expanded={expanded}
       on:click={toggleExpanded}
-      class="btn btn-outline btn-secondary"
+      class="btn btn-outline btn-secondary no-animation"
     >
       {title}
       <svg viewBox="0 0 20 20" fill="none" class="stroke-2 stroke-secondary">
