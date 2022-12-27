@@ -44,16 +44,16 @@ export const oCeVeste: Song = {
     ],
     [
       'Că la Vitleem Maria',
-      'Săvârşind călătoria',
-      'Într-un mic sălaş',
-      'Lângă-acel oraş',
+      'Săvârșind călătoria',
+      'Într-un mic sălaș',
+      'Lângă-acel oraș',
       'A născut pe Mesia.',
     ],
     [
       'Pe Fiul în al Său nume',
       'Tatăl L-a trimis în lume',
       'Să se nască',
-      'Şi să crească',
+      'Și să crească',
       'Să ne mântuiască.',
     ],
   ],
@@ -77,6 +77,63 @@ export const laVitleem: Song = {
       'Preacurată',
       'Pruncul sfânt de-i înfășa.',
     ],
+  ],
+  searchLyrics: '',
+};
+
+export const mareMinune: Song = {
+  title: 'Mare minune',
+  displayLyrics: [
+    [
+      'Mare minune s-arată',
+      'La Vitleem astă dată',
+      'De îngeri și de păstori',
+      'Ciobănașii de la oi.',
+    ],
+    [
+      'Aduce-se laudă multă',
+      'Lângă peștera cea sfântă',
+      'Strigau păstorii cântare',
+      'Laudă pe Domnului prea mare.',
+    ],
+  ],
+  searchLyrics: '',
+};
+
+export const iosif: Song = {
+  title: 'Iosif cu Maria',
+  displayLyrics: [
+    [
+      'Iosif cu Maria-ntrară',
+      'În oraș de către seară',
+      'Nașterea s-apropia',
+      'Și Maria se-ngrijea.',
+    ],
+    [
+      'Ajutor ceresc cerea',
+      'Ca ușor să nască ea',
+      'Și ușor a și născut',
+      'Un fiu mândru și plăcut.',
+    ],
+    [
+      'Raze pe cap îi luceau',
+      'Stele din cer luminau',
+      'Și-apoi mama-l înfășa',
+      'Și în iesle-l așeza',
+    ],
+  ],
+  searchLyrics: '',
+};
+
+export const slobozaNe: Song = {
+  title: 'Slobozâ-ne gazdă-n casă',
+  displayLyrics: [
+    ['Slobozâ-ne gazdă-n casă', 'Bună sara lui Crăciun!'],
+    ['C-afară plouă de varsă', 'Bună sara lui Crăciun!'],
+    ['Și ne ninje de ne frije', 'Bună sara lui Crăciun!'],
+    ['V-aducem vestea cea mare', 'Că e zi de sărbătoare', 'Bună sara lui Crăciun!'],
+    ['Că azi s-a nascut Hristos', 'Tuturora spre folos', 'Bună sara lui Crăciun!'],
+    ['Să fii gazdă sănătoasă', 'Să plătești corinda nostră', 'Bună sara lui Crăciun!'],
   ],
   searchLyrics: '',
 };

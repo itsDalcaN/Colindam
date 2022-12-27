@@ -6,6 +6,7 @@
     <ul class="menu menu-horizontal px-1 font-semibold text-primary-content">
       <li><a href="/houses">Houses</a></li>
       <li><a href="/lyrics">Lyrics</a></li>
+      <li><a href="/settings"><span class="material-symbols-outlined"> settings </span></a></li>
     </ul>
   </div>
 </div>
