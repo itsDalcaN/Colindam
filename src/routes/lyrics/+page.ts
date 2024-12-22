@@ -2,6 +2,8 @@ import {
   bingBang,
   colindita,
   domnulet,
+  domnulIisusHristos,
+  gazdeMari,
   iataVinColindatori,
   iosif,
   laNunta,
@@ -11,6 +13,11 @@ import {
   oMinune,
   praznic,
   slobozaNe,
+  treiCrai,
+  noiInSeara,
+  laPoarta,
+  noiUmblam,
+  laMosAjun,
   type Song,
 } from '$lib/songs';
 import { convertRomanianSymbols, removePunctuation } from '$lib/util';
@@ -30,6 +37,13 @@ export const load = (() => {
     bingBang,
     iataVinColindatori,
     colindita,
+    gazdeMari,
+    domnulIisusHristos,
+    treiCrai,
+    noiInSeara,
+    laPoarta,
+    noiUmblam,
+    laMosAjun,
   ];
 
   // Get completed songs only
