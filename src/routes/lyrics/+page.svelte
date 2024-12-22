@@ -1,6 +1,6 @@
 <script lang="ts">
   import CollapsibleSection from '$lib/CollapsibleSection.svelte';
-  import { autoExpandOnSearchSetting } from '$lib/stores';
+  import { autoExpandOnSearchSetting, sortSongsAlphabeticallySetting } from '$lib/stores';
   import { convertRomanianSymbols, removePunctuation } from '$lib/util';
   import type { PageData } from './$types';
   export let data: PageData;
@@ -11,9 +11,14 @@
   let shouldExpandAll = false; // Expand all songs toggle state
   let activateAutoExpand = false; // Conditionally expand based on search
   let shouldAutoExpandOnSearch = false; // Local setting from the store
+  let sortSongsAlphabetically = false; // Local setting from the store
 
-  autoExpandOnSearchSetting.subscribe((value) => {
+  autoExpandOnSearchSetting.subscribe((value: boolean) => {
     shouldAutoExpandOnSearch = value;
+  });
+
+  sortSongsAlphabeticallySetting.subscribe((value: boolean) => {
+    sortSongsAlphabetically = value;
   });
 
   $: {
@@ -25,6 +30,11 @@
 
   function updateSongs(value: string) {
     songs = initSongs.filter((s) => stringIncludesValue(s.searchLyrics, value));
+
+    // Sort songs by title
+    if (sortSongsAlphabetically) {
+      songs.sort((songA, songB) => songA.title.localeCompare(songB.title));
+    }
   }
 
   function stringIncludesValue(line: string, value: string) {
@@ -34,7 +44,7 @@
 </script>
 
 <h2 class="text-center">Lyrics</h2>
-<div class="m-auto sm:w-5/6 md:w-3/5 lg:w-1/2 xl:w-5/12 ">
+<div class="m-auto sm:w-5/6 md:w-3/5 lg:w-1/2 xl:w-5/12">
   <div class="mb-10">
     <div class="search-field">
       <div class="material-symbols-outlined">search</div>

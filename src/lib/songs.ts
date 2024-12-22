@@ -139,7 +139,7 @@ export const slobozaNe: Song = {
 };
 
 export const laNunta: Song = {
-  title: 'La nunta ce s-a-ntâmplat',
+  title: 'Nunta din Cana',
   displayLyrics: [
     ['La nunta ce s-a-ntâmplat', 'În Cana Galileii', 'Fost-a și Iisus chemat', 'În Cana Galileii.'],
     [
@@ -235,18 +235,56 @@ export const praznic: Song = {
 
 export const bingBang: Song = {
   title: "(Bing! Bang!) Mărire-ntru cele 'nalte",
-  displayLyrics: [['in progress']],
+  displayLyrics: [
+    ['(Bing! Bang!)'],
+    ["Mărire-ntru cele 'nalte", 'Toate stelele să salte'],
+    ['Salte cerul și pământul', 'Și să laude Cuvântul.'],
+    ['Întru cei de sus mărire', 'Și pe pământ păciure'],
+    ['La toți oamenii să fie', 'De acum până-n vecie.'],
+    [
+      'Această zi presfințită',
+      'Și sărbătoare slăvită',
+      'Urăm la toți să vă fie',
+      "'Ntru mulți ani cu bucurie!",
+      "Mărire-ntru cele 'nalte",
+      'Toate stelele să salte',
+    ],
+    ['(Bing! Bang!)'],
+  ],
   searchLyrics: '',
 };
 
 export const iataVinColindatori: Song = {
   title: 'Iată, vin colindători',
-  displayLyrics: [['in progress']],
+  displayLyrics: [
+    ['(Colinda, colinda)'],
+    ['Iată vin colindători', 'Florile dalbe', 'Noaptea, pe la cântători.'],
+    ['Și ei vin mereu, mereu', 'Florile dalbe', 'Și v-aduc pe Dumnezeu.'],
+    ['Dumnezeu adevărat', 'Florile dalbe', 'Soare-n raze luminat.'],
+    ['(Colinda, colinda)'],
+  ],
   searchLyrics: '',
 };
 
 export const colindita: Song = {
   title: 'Colindița',
-  displayLyrics: [['in progress']],
+  displayLyrics: [
+    ['Colindita nu-i mai multă,', 'Să trăiască cine-ascultă,'],
+    ['Sus la ceruri o-nălțăm', 'Și la gazde o-nchinăm.'],
+    [
+      'O-nchinăm cu veselie',
+      'Și cu mare bucurie,',
+      'C-am ajuns seara de Ajun',
+      'A bătrânului Crăciun.',
+    ],
+    ['Sus mai sus v-am înălțat,', 'Ce-am știut noi v-am cântat.'],
+    [
+      'Să rămâneți sănătoși,',
+      'Sănătoși și bucuroși,',
+      'C-am ajuns seara cea sfântă',
+      'Când colindele se cântă.',
+    ],
+    ['Sărbătoarea lui Hristos', 'Să vă fie de folos!'],
+  ],
   searchLyrics: '',
 };
