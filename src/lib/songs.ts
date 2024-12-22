@@ -288,3 +288,188 @@ export const colindita: Song = {
   ],
   searchLyrics: '',
 };
+
+export const gazdeMari: Song = {
+  title: 'Gazde Mari',
+  displayLyrics: [
+    ['Gazde mari nu mai dormiți', 'Lilioară, trandafir', 'Că nu-i vreme de dormit.'],
+    ['Da-i vreme de colindat', 'Lilioară, trandafir', 'Și cocoșii au cântat'],
+    [
+      'Da-i vremea de-mpodobit',
+      'Lilioară, trandafir',
+      'Și Crăciunul a sosit',
+      'Lilioară, trandafir!',
+    ],
+  ],
+  searchLyrics: '',
+};
+
+export const domnulIisusHristos: Song = {
+  title: 'Domnul Iisus Hristos',
+  displayLyrics: [
+    [
+      'Nouă azi ne-a răsărit',
+      'Domnul Iisus Hristos',
+      'Mesia cel mult dorit',
+      'Domnul Iisus Hristos',
+    ],
+    [
+      'Din Fecioara s-a născut',
+      'Domnul Iisus Hristos',
+      'Și cu lapte s-a crescut',
+      'Domnul Iisus Hristos',
+    ],
+    [
+      "În scutece s-a 'nfășat",
+      'Domnul Iisus Hristos',
+      'Și în brațe s-a purtat',
+      'Domnul Iisus Hristos',
+    ],
+    [
+      'Cum e robul s-a smerit',
+      'Domnul Iisus Hristos',
+      'Și pe noi ne-a mântuit',
+      'Domnul Iisus Hristos',
+    ],
+  ],
+  searchLyrics: '',
+};
+
+export const treiCrai: Song = {
+  title: 'Trei Crai de la Răsărit',
+  displayLyrics: [
+    [
+      'Trei crai de la răsărit',
+      'Spre stea au călătorit',
+      'Și-au mers după cum citim',
+      'Până la Ierusalim',
+    ],
+    [
+      'Acolo dacă au ajuns',
+      'Steaua-n nori li s-a ascuns',
+      'Și le-a fost a se plimba',
+      'Prin oraș a întreba.',
+    ],
+    [
+      'Unde S-a născut, zicând:',
+      'Un Crai mare de curând?',
+      'Iar Irod împărat',
+      'Auzind s-a tulburat.',
+    ],
+    [
+      'Pe crai grabnic i-a chemat',
+      'Și în taină i-a-ntrebat',
+      'Ispitindu-i vru setos',
+      'Ca să afle pe Hristos.',
+    ],
+    [
+      'Craii dacă au plecat',
+      'Steaua iar s-a arătat',
+      "Și a mers pan' a statut",
+      "Und' era Pruncul născut.",
+    ],
+    [
+      'Și cu toți s-au bucurat',
+      'Pe Hristos dacă au aflat',
+      'Cu daruri s-au închinat',
+      'Ca unui Mare-împărat.',
+    ],
+  ],
+  searchLyrics: '',
+};
+
+export const noiInSeara: Song = {
+  title: 'Noi în seara de Crăciun',
+  displayLyrics: [
+    ['Noi în seara de Crăciun', 'Lăudăm pe Cel Preabun', 'Bun ești, Doamne, bun.'],
+    ['Colindăm colind duios', 'Domnului Iisus Hristos.', 'Bun ești, Doamne, bun.'],
+    ['Noi umblăm să împlinim', 'Obiceiul din bătrâni.', 'Bun ești, Doamne, bun.'],
+    ['Obicei de colindat,', 'Pe la case de urat.', 'Bun ești, Doamne, bun.'],
+  ],
+  searchLyrics: '',
+};
+
+export const laPoarta: Song = {
+  title: 'La poartă la Ștefan Vodă',
+  displayLyrics: [
+    ['La poartă la Ștefan Vodă', 'Lerului Domnului', 'Boierii s-au strâns la vorbă'],
+    ['Dar vorba de cine este', 'Lerului Domnului', 'De Iisus născut în iesle'],
+    ['Atunci Ștefan Domn prea Sfânt', 'Lerului Domnului', 'De la rugă auzind'],
+    ['Pe boieri care vorbeau', 'Lerului Domnului', 'Și pe Domnul preamăreau'],
+    ['El pe dată s-a plecat', 'Lerului Domnului', 'Cu boierii s-a închinat'],
+    ['Și cu glasul de supus', 'Lerului Domnului', 'A merit pe Domn Iisus'],
+  ],
+  searchLyrics: '',
+};
+
+export const noiUmblam: Song = {
+  title: 'Închinarea pastorilor',
+  displayLyrics: [
+    [
+      'Noi umblăm și colindăm',
+      'Florile dalbe',
+      'Pe Dumnezeu căutăm',
+      'Florile dalbe',
+      'Alergăm și-L aflăm',
+      'Florile dalbe',
+      'În iesle la boi, născut',
+      'Florile dalbe.',
+    ],
+    [
+      'Vântul dulce trăgăna',
+      'Florile dalbe',
+      'Pruncul de mi-L leagănă',
+      'Florile dalbe',
+      'Ploaia caldă, Fiul scaldă',
+      'Florile dalbe',
+      'Neaua ninge, nu-L atinge',
+      'Florile dalbe.',
+    ],
+    [
+      'Pruncul mâinile-și întinde',
+      'Florile dalbe',
+      'Maica sfântă le sărută',
+      'Florile dalbe',
+      'La pământ plecându-ne',
+      'Florile dalbe',
+      'Și noi sărutându-le',
+      'Florile dalbe.',
+    ],
+    [
+      'Bucuroși să-L praznuim',
+      'Florile dalbe',
+      'Cu daruri, să-L dăruim',
+      'Florile dalbe',
+      'Cu stele albe de flori',
+      'Florile dalbe',
+      'Și-o oaie cu miel prior',
+      'Florile dalbe',
+    ],
+  ],
+  searchLyrics: '',
+};
+
+export const laMosAjun: Song = {
+  title: 'Bună dimineața la Moș Ajun',
+  displayLyrics: [
+    [
+      'Bună dimineața la Moș Ajun',
+      'Ne dați ori nu ne dați?',
+      'Ne dați ori nu ne dați?',
+      'Ne dați, ne dați?',
+    ],
+    [
+      'Am venit și noi odată',
+      'La mulți ani cu sănătate',
+      'Domnul Sfânt să ne ajute',
+      'La covrigi și la nuci multe!',
+    ],
+    [
+      'Bună dimineața la Moș Ajun',
+      'Ne dați ori nu ne dați?',
+      'Ne dați ori nu ne dați?',
+      'Ne dați, ne dați?',
+    ],
+  ],
+  searchLyrics: '',
+};
