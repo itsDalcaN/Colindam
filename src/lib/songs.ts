@@ -204,7 +204,32 @@ export const domnulet: Song = {
 
 export const praznic: Song = {
   title: 'Praznic luminos',
-  displayLyrics: [['in progress']],
+  displayLyrics: [
+    [
+      'Praznic luminos, strălucit frumos',
+      'Astăzi ne-a sosit și ne-a nveselit',
+      'Că Mantuitorul și Izbavitorul',
+      'Cu trup s-a nascut.',
+    ],
+    [
+      'Raiul cel închis, azi iar s-a deschis',
+      'Șarpelui cumplit capul s-a zdrobit',
+      'Și strămoșii iara, prin Sfânta Fecioară',
+      'Iar s-au înnoit.',
+    ],
+    [
+      'Îngerii cântau, păstori fluierau',
+      'Magii se-nchinau, toți se bucurau.',
+      'Dar Irod era că se tulbură',
+      'De nașterea Sa.',
+    ],
+    [
+      'El îl căuta, voind morții-al da',
+      'Dar Pruncul Iisus din țară s-a dus',
+      'Fie lăudat, binecuvântat,',
+      'În veacuri. Amin.',
+    ],
+  ],
   searchLyrics: '',
 };
 

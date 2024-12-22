@@ -32,18 +32,22 @@ export const load = (() => {
     colindita,
   ];
 
-  songs.forEach((song) => {
-    song.searchLyrics = convertDisplayToSearchLyrics(song.displayLyrics);
-    console.log(song.searchLyrics);
-  });
+  // Get completed songs only
+  const completedSongs: Song[] = songs.filter(
+    (song) => toSingleString(song.displayLyrics).indexOf('in progress') === -1
+  );
+
+  // Set search indexable lyrics
+  completedSongs.forEach((song) => setSearchLyrics(song));
 
   return {
-    songs: songs,
+    songs: completedSongs,
   };
 }) satisfies PageLoad;
 
-function convertDisplayToSearchLyrics(displayLyrics: string[][]) {
-  return convertRomanianSymbols(removePunctuation(toSingleString(displayLyrics)));
+function setSearchLyrics(song: Song) {
+  song.searchLyrics = convertRomanianSymbols(removePunctuation(toSingleString(song.displayLyrics)));
+  console.log(song.searchLyrics);
 }
 
 function toSingleString(lyrics: string[][]) {
