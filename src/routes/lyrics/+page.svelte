@@ -75,10 +75,13 @@
     {#each songs as { title, displayLyrics }}
       <CollapsibleSection {title} expanded={shouldExpandAll || activateAutoExpand}>
         {#each displayLyrics as verse}
-          <p>
+          <p class="text-xl">
             {#each verse as line}
               {#if search !== '' && stringIncludesValue(line, search)}
-                <span><mark class="text-accent bg-transparent">{line}</mark></span>
+                <span
+                  ><mark class="text-neutral-content font-semibold bg-transparent">{line}</mark
+                  ></span
+                >
                 <br />
               {:else}
                 <span>{line}</span> <br />
@@ -100,7 +103,11 @@
   }
 
   .material-symbols-outlined {
-    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 200, 'opsz' 48;
+    font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 200,
+      'opsz' 48;
     padding: 5px;
   }
 </style>

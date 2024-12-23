@@ -61,7 +61,7 @@ export const load = (() => {
 
 function setSearchLyrics(song: Song) {
   song.searchLyrics = convertRomanianSymbols(removePunctuation(toSingleString(song.displayLyrics)));
-  console.log(song.searchLyrics);
+  console.log(`Loaded \'${song.title}\'`);
 }
 
 function toSingleString(lyrics: string[][]) {
