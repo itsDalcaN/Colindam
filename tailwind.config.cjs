@@ -8,7 +8,7 @@ const config = {
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
 
   daisyui: {
-    themes: ['dracula'],
+    themes: ['night'],
   },
 };
 
