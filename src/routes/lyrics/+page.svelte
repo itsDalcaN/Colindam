@@ -54,7 +54,7 @@
         class="input input-ghost w-full text-left mx-2"
         bind:value={search}
       />
-      <button on:click={() => (search = '')}>
+      <button id="clear" on:click={() => (search = '')} disabled={search === ''}>
         <span class="material-symbols-outlined">backspace</span>
       </button>
       <label class="swap">
@@ -109,5 +109,9 @@
       'GRAD' 200,
       'opsz' 48;
     padding: 5px;
+  }
+
+  #clear:disabled {
+    opacity: 0.1;
   }
 </style>
