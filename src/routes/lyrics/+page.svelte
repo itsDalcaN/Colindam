@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Fuse, { type FuseResult } from 'fuse.js'; // fuzzy search
+  import Fuse from 'fuse.js'; // fuzzy search
   import CollapsibleSection from '$lib/CollapsibleSection.svelte';
   import {
     autoExpandOnSearchSetting,

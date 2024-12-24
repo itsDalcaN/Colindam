@@ -18,7 +18,9 @@ import {
   laPoarta,
   noiUmblam,
   laMosAjun,
+  treiPastori,
   type Song,
+  astaSeara,
 } from '$lib/songs';
 import { convertRomanianSymbols, removePunctuation } from '$lib/util';
 import type { PageLoad } from './$types';
@@ -44,6 +46,8 @@ export const load = (() => {
     laPoarta,
     noiUmblam,
     laMosAjun,
+    treiPastori,
+    astaSeara,
   ];
 
   // Get completed songs only

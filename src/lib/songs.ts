@@ -394,7 +394,7 @@ export const noiUmblam: Song = {
       'Florile dalbe',
       'Pe Dumnezeu căutăm',
       'Florile dalbe',
-      'Alergăm și-L aflăm',
+      'Alergarăm și-L aflarăm',
       'Florile dalbe',
       'În iesle la boi, născut',
       'Florile dalbe.',
@@ -442,16 +442,76 @@ export const laMosAjun: Song = {
       'Ne dați, ne dați?',
     ],
     [
-      'Am venit și noi odată',
-      'La mulți ani cu sănătate',
-      'Domnul Sfânt să ne ajute',
-      'La covrigi și la nuci multe!',
-    ],
-    [
       'Bună dimineața la Moș Ajun',
       'Ne dați ori nu ne dați?',
       'Ne dați ori nu ne dați?',
       'Ne dați, ne dați?',
+    ],
+  ],
+};
+
+export const treiPastori: Song = {
+  title: 'Trei păstori se întâlniră',
+  displayLyrics: [
+    [
+      'Trei păstori se întâlniră',
+      'Trei păstori se întâlniră',
+      'Rază soarelui, floarea soarelui',
+      'Și așa se sfătuiră:',
+    ],
+    [
+      'Hădeți fraților să mergem',
+      'Hădeți fraților să mergem',
+      'Rază soarelui, floarea soarelui',
+      'Floricele să culegem.',
+    ],
+    [
+      'Și să facem o cunună',
+      'Și să facem o cunună',
+      'Rază soarelui, floarea soarelui',
+      'S-o umplem cu voie bună.',
+    ],
+    [
+      'Și s-o ducem lui Hristos',
+      'Și s-o ducem lui Hristos',
+      'Rază soarelui, floarea soarelui',
+      'Să ne fie de folos.',
+    ],
+  ],
+};
+
+export const astaSeara: Song = {
+  title: 'Asta-i seară seară mare',
+  displayLyrics: [
+    [
+      'Asta-i seară seară mare',
+      'Domnului și Domn din cer',
+      'Dar de ce e seară mare?',
+      'Domnului și Domn din cer.',
+    ],
+    [
+      'Este seară lui Crăciunul',
+      'Domnului și Domn din cer',
+      "Lăsată de Domnul Bunu'",
+      'Domnului și Domn din cer.',
+    ],
+    [
+      'S-a născut un Fiu din Maică',
+      'Domnului și Domn din cer',
+      'Fiu din Maică fără taică',
+      'Domnului și Domn din cer.',
+    ],
+    [
+      'Dar numele cum i-a pus?',
+      'Domnului și Domn din cer',
+      'Tot Iisus Hristos Iisusu',
+      'Domnului și Domn din cer.',
+    ],
+    [
+      'Cerul ca să mi-L privească',
+      'Domnului și Domn din cer',
+      'Pământul să-L stăpânească',
+      'Domnului și Domn din cer',
     ],
   ],
 };
