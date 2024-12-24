@@ -30,7 +30,6 @@ export const oMinune: Song = {
       'O minune!',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const oCeVeste: Song = {
@@ -58,7 +57,6 @@ export const oCeVeste: Song = {
       'Să ne mântuiască.',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const laVitleem: Song = {
@@ -79,7 +77,6 @@ export const laVitleem: Song = {
       'Pruncul sfânt de-i înfășa.',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const mareMinune: Song = {
@@ -98,7 +95,6 @@ export const mareMinune: Song = {
       'Laudă pe Domnului prea mare.',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const iosif: Song = {
@@ -123,7 +119,6 @@ export const iosif: Song = {
       'Și în iesle-l așeza',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const slobozaNe: Song = {
@@ -136,7 +131,6 @@ export const slobozaNe: Song = {
     ['Că azi s-a născut Hristos', 'Tuturora spre folos', 'Bună sara lui Crăciun!'],
     ['Să fii gazdă sănătoasă', 'Să plătești corinda nostră', 'Bună sara lui Crăciun!'],
   ],
-  searchLyrics: '',
 };
 
 export const laNunta: Song = {
@@ -163,7 +157,6 @@ export const laNunta: Song = {
       'În Cana Galileii.',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const domnulet: Song = {
@@ -200,7 +193,6 @@ export const domnulet: Song = {
       'Domnuleț și Domn din cer',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const praznic: Song = {
@@ -231,7 +223,6 @@ export const praznic: Song = {
       'În veacuri. Amin.',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const bingBang: Song = {
@@ -252,7 +243,6 @@ export const bingBang: Song = {
     ],
     ['(Bing! Bang!)'],
   ],
-  searchLyrics: '',
 };
 
 export const iataVinColindatori: Song = {
@@ -264,7 +254,6 @@ export const iataVinColindatori: Song = {
     ['Dumnezeu adevărat', 'Florile dalbe', 'Soare-n raze luminat.'],
     ['(Colinda, colinda)'],
   ],
-  searchLyrics: '',
 };
 
 export const colindita: Song = {
@@ -287,7 +276,6 @@ export const colindita: Song = {
     ],
     ['Sărbătoarea lui Hristos', 'Să vă fie de folos!'],
   ],
-  searchLyrics: '',
 };
 
 export const gazdeMari: Song = {
@@ -302,7 +290,6 @@ export const gazdeMari: Song = {
       'Lilioară, trandafir!',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const domnulIisusHristos: Song = {
@@ -333,7 +320,6 @@ export const domnulIisusHristos: Song = {
       'Domnul Iisus Hristos',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const treiCrai: Song = {
@@ -376,7 +362,6 @@ export const treiCrai: Song = {
       'Ca unui Mare-împărat.',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const noiInSeara: Song = {
@@ -387,7 +372,6 @@ export const noiInSeara: Song = {
     ['Noi umblăm să împlinim', 'Obiceiul din bătrâni.', 'Bun ești, Doamne, bun.'],
     ['Obicei de colindat,', 'Pe la case de urat.', 'Bun ești, Doamne, bun.'],
   ],
-  searchLyrics: '',
 };
 
 export const laPoarta: Song = {
@@ -400,7 +384,6 @@ export const laPoarta: Song = {
     ['El pe dată s-a plecat', 'Lerului Domnului', 'Cu boierii s-a închinat'],
     ['Și cu glasul de supus', 'Lerului Domnului', 'A merit pe Domn Iisus'],
   ],
-  searchLyrics: '',
 };
 
 export const noiUmblam: Song = {
@@ -447,7 +430,6 @@ export const noiUmblam: Song = {
       'Florile dalbe',
     ],
   ],
-  searchLyrics: '',
 };
 
 export const laMosAjun: Song = {
@@ -472,5 +454,4 @@ export const laMosAjun: Song = {
       'Ne dați, ne dați?',
     ],
   ],
-  searchLyrics: '',
 };

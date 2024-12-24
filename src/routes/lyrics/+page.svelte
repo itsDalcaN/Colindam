@@ -12,15 +12,6 @@
   export let data: PageData;
 
   const initSongs = data.songs;
-  const fuse = new Fuse(initSongs, {
-    keys: [{ name: 'searchTitle', weight: 2 }, 'searchLyrics'],
-    isCaseSensitive: false,
-    shouldSort: true,
-    includeScore: true,
-    ignoreLocation: true,
-    threshold: 0.2,
-  });
-
   let songs = initSongs;
   let search = '';
   let shouldExpandAll = false; // Expand all songs toggle state
@@ -61,6 +52,15 @@
     console.log(`Search pattern: ${search}`);
     let searchResults: Song[];
 
+    const fuse = new Fuse(initSongs, {
+      keys: [{ name: 'searchTitle', weight: 2 }, 'searchLyrics'],
+      isCaseSensitive: false,
+      shouldSort: true,
+      includeScore: true,
+      ignoreLocation: true,
+      threshold: 0.2,
+    });
+
     if (useFuzzySearch) {
       const fuseResults = fuse.search(search);
       console.log(fuseResults);
@@ -71,7 +71,6 @@
     }
 
     console.log(`Matched ${searchResults.length} songs:`);
-    console.log(searchResults);
     return searchResults;
   }
 
