@@ -1,6 +1,7 @@
 export type Song = {
   title: string;
-  searchLyrics: string;
+  searchLyrics?: string;
+  searchTitle?: string;
   displayLyrics: string[][];
 };
 

@@ -1,24 +1,42 @@
 <script lang="ts">
+  import Fuse, { type FuseResult } from 'fuse.js'; // fuzzy search
   import CollapsibleSection from '$lib/CollapsibleSection.svelte';
-  import { autoExpandOnSearchSetting, sortSongsAlphabeticallySetting } from '$lib/stores';
+  import {
+    autoExpandOnSearchSetting,
+    sortSongsAlphabeticallySetting,
+    requireExactMatchSetting,
+  } from '$lib/stores';
   import { convertRomanianSymbols, removePunctuation } from '$lib/util';
   import type { PageData } from './$types';
+  import type { Song } from '$lib/songs';
   export let data: PageData;
+
   const initSongs = data.songs;
+  const fuse = new Fuse(initSongs, {
+    keys: [{ name: 'searchTitle', weight: 2 }, 'searchLyrics'],
+    isCaseSensitive: false,
+    shouldSort: true,
+    includeScore: true,
+    ignoreLocation: true,
+    threshold: 0.2,
+  });
+
   let songs = initSongs;
   let search = '';
-
   let shouldExpandAll = false; // Expand all songs toggle state
   let activateAutoExpand = false; // Conditionally expand based on search
   let shouldAutoExpandOnSearch = false; // Local setting from the store
   let sortSongsAlphabetically = false; // Local setting from the store
+  let useFuzzySearch = false; // Local setting from the store
 
   autoExpandOnSearchSetting.subscribe((value: boolean) => {
     shouldAutoExpandOnSearch = value;
   });
-
   sortSongsAlphabeticallySetting.subscribe((value: boolean) => {
     sortSongsAlphabetically = value;
+  });
+  requireExactMatchSetting.subscribe((value: boolean) => {
+    useFuzzySearch = !value;
   });
 
   $: {
@@ -28,13 +46,33 @@
     }
   }
 
-  function updateSongs(value: string) {
-    songs = initSongs.filter((s) => stringIncludesValue(s.searchLyrics, value));
-
-    // Sort songs by title
-    if (sortSongsAlphabetically) {
-      songs.sort((songA, songB) => songA.title.localeCompare(songB.title));
+  function updateSongs(search: string) {
+    if (search !== '') {
+      songs = querySongs(search);
+    } else {
+      songs = initSongs;
+      if (sortSongsAlphabetically) {
+        songs.sort((songA, songB) => songA.title.localeCompare(songB.title));
+      }
     }
+  }
+
+  function querySongs(search: string) {
+    console.log(`Search pattern: ${search}`);
+    let searchResults: Song[];
+
+    if (useFuzzySearch) {
+      const fuseResults = fuse.search(search);
+      console.log(fuseResults);
+      searchResults = fuseResults.map((fuseResult) => fuseResult.item);
+    } else {
+      // Legacy search algorithm
+      searchResults = initSongs.filter((s) => stringIncludesValue(s.searchLyrics || '', search));
+    }
+
+    console.log(`Matched ${searchResults.length} songs:`);
+    console.log(searchResults);
+    return searchResults;
   }
 
   function stringIncludesValue(line: string, value: string) {

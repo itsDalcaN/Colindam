@@ -51,17 +51,24 @@ export const load = (() => {
     (song) => toSingleString(song.displayLyrics).indexOf('in progress') === -1
   );
 
-  // Set search indexable lyrics
-  completedSongs.forEach((song) => setSearchLyrics(song));
+  // Set search indexable lyrics and titles
+  completedSongs.forEach((song) => {
+    const indexableLyrics = toSearchIndexableString(toSingleString(song.displayLyrics));
+    song.searchLyrics = indexableLyrics;
+
+    const indexableTitle = toSearchIndexableString(song.title);
+    song.searchTitle = indexableTitle;
+
+    console.log(`Loaded \'${song.title}\'`);
+  });
 
   return {
     songs: completedSongs,
   };
 }) satisfies PageLoad;
 
-function setSearchLyrics(song: Song) {
-  song.searchLyrics = convertRomanianSymbols(removePunctuation(toSingleString(song.displayLyrics)));
-  console.log(`Loaded \'${song.title}\'`);
+function toSearchIndexableString(input: string) {
+  return convertRomanianSymbols(removePunctuation(input));
 }
 
 function toSingleString(lyrics: string[][]) {
