@@ -12,3 +12,11 @@
 >
   <slot />
 </article>
+<footer class="footer footer-center bg-base-300 text-base-content p-4">
+  <aside>
+    <p>
+      Created in {new Date().getFullYear()} by Dan Sumindan /
+      <a class="link link-secondary" href="https://github.com/itsDalcaN/Colindam">GitHub</a>
+    </p>
+  </aside>
+</footer>
