@@ -12,9 +12,9 @@
     <button
       aria-expanded={expanded}
       on:click={toggleExpanded}
-      class="btn btn-ghost uppercase no-animation text-primary text-base italic"
+      class="btn btn-ghost uppercase no-animation text-primary text-base italic flex-nowrap whitespace-nowrap"
     >
-      {title}
+      <div class="overflow-hidden text-ellipsis">{title}</div>
       <svg viewBox="0 0 20 20" fill="none" class="stroke-2 stroke-primary">
         <path class="vert" d="M10 1V19" />
         <path d="M1 10L19 10" />
