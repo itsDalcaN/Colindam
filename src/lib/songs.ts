@@ -177,7 +177,7 @@ export const domnulet: Song = {
     [
       'Fiul plânge, stare n-are',
       'Domnuleț și Domn din cer',
-      'Pe bratele maicii sale',
+      'Pe brațele maicii sale',
       'Domnuleț și Domn din cer.',
     ],
     [
@@ -302,7 +302,7 @@ export const domnulIisusHristos: Song = {
       'Domnul Iisus Hristos',
     ],
     [
-      'Din Fecioara s-a născut',
+      'Din Fecioară s-a născut',
       'Domnul Iisus Hristos',
       'Și cu lapte s-a crescut',
       'Domnul Iisus Hristos',
@@ -440,6 +440,12 @@ export const laMosAjun: Song = {
       'Ne dați ori nu ne dați?',
       'Ne dați ori nu ne dați?',
       'Ne dați, ne dați?',
+    ],
+    [
+      'Am venit și noi o dată',
+      'La mulți ani cu sănătate',
+      'Domnul sfânt să ne ajute',
+      'La covrigi și la nuci multe',
     ],
     [
       'Bună dimineața la Moș Ajun',
