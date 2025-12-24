@@ -21,6 +21,9 @@ import {
   treiPastori,
   type Song,
   astaSeara,
+  deTreiZile,
+  ziurelDeZi,
+  doamneLerDomnului,
 } from '$lib/songs';
 import { convertRomanianSymbols, removePunctuation } from '$lib/util';
 import type { PageLoad } from './$types';
@@ -48,6 +51,9 @@ export const load = (() => {
     laMosAjun,
     treiPastori,
     astaSeara,
+    deTreiZile,
+    ziurelDeZi,
+    doamneLerDomnului,
   ];
 
   // Get completed songs only

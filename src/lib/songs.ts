@@ -521,3 +521,37 @@ export const astaSeara: Song = {
     ],
   ],
 };
+
+export const deTreiZile: Song = {
+  title: 'De trei zile',
+  displayLyrics: [
+    ["De trei zile tot venimu'", "De trei zile tot venimu'", 'Sara-i bun-a lui Crăciun.'],
+    ["N-auzim cocoși cântându'", "N-auzim cocoși cântându'", 'Sara-i bun-a lui Crăciun.'],
+    ["Numai oameni veselindu'", "Numai oameni veselindu'", 'Sara-i bun-a lui Crăciun.'],
+    ["Veselind cu vesel bunu'", "C-am ajuns acest Crăciunu'", 'Sara-i bun-a lui Crăciun.'],
+  ],
+};
+
+export const ziurelDeZi: Song = {
+  title: 'Ziurel de zi',
+  displayLyrics: [
+    ['Domnul Sfânt când S-a născut,', 'Ziurel de zi', 'Maica Sfântă aşa zicea:', 'Ziurel de zi.'],
+    ['Lăudaţi naşterea mea,', 'Ziurel de zi', 'C-am născut pe Mesia,', 'Ziurel de zi.'],
+  ],
+};
+
+export const doamneLerDomnului: Song = {
+  title: 'Doamne, ler Domnului',
+  displayLyrics: [
+    ['Doamne, ler Domnului Doamne', 'Ia ieșiți boieri afară...', 'Ia ieșiți boieri afară.'],
+    ['Doamne, ler Domnului Doamne', 'De vedeți ce să coboară...', 'De vedeți ce să coboară.'],
+    ['Doamne, ler Domnului Doamne', 'Să coboară două flori...', 'Să coboară două flori.'],
+    [
+      'Doamne, ler Domnului Doamne',
+      "Da' nu-s flori, că-s frățiori...",
+      "Da' nu-s flori, că-s frățiori.",
+    ],
+    ['Doamne, ler Domnului Doamne', 'Vin roșu să be` le dea...', 'Vin roșu să be` le dea.'],
+    ['Doamne, ler Domnului Doamne.'],
+  ],
+};
