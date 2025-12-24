@@ -1,6 +1,6 @@
 export function removePunctuation(s: string) {
   // eslint-disable-next-line no-useless-escape
-  return s.replace(/[.,\/#!$%\^&\*;:{}=\_`~()]/g, '').replace(/\s{2,}/g, ' ');
+  return s.replace(/[.,\/#!$%\^&\*;:{}=\_`~()-?]/g, '').replace(/\s{2,}/g, ' ');
 }
 
 export function convertRomanianSymbols(s: string) {
